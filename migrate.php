@@ -1,13 +1,13 @@
 <?php
-require 'modules/db_connect.php';
+require 'Modules/db_connect.php';
 
-$migrations = scandir('migrations');
+$migrations = scandir('Migrations');
 unset($migrations[0]);
 unset($migrations[1]);
 
 foreach ($migrations as $migration) {
     if (shouldQuery($migration)) {
-        require_once ('migrations/' . $migration);
+        require_once ('Migrations/' . $migration);
 
         $time = getTime($migration);
         $queries_up = ('up' . $time)();
@@ -29,7 +29,7 @@ foreach ($migrations as $migration) {
                 mysqli_query($db, $queries_down[$k]);
             }
         } else {
-            mysqli_query($db, "INSERT INTO migrations (`name`) VALUES ('$migration')");
+            mysqli_query($db, "INSERT INTO Migrations (`name`) VALUES ('$migration')");
             echo 'Success: ' . $migration . '<br>';
         }
     }
@@ -45,6 +45,6 @@ function getTime(string $filename) : string
 function  shouldQuery(string $migration) : bool
 {
     global $db;
-    $result = mysqli_query($db, "SELECT * FROM migrations WHERE name = '$migration'");
+    $result = mysqli_query($db, "SELECT * FROM Migrations WHERE name = '$migration'");
     return mysqli_num_rows($result) === 0 ? true : false;
 }

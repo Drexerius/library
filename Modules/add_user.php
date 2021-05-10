@@ -17,4 +17,4 @@ if (!empty($login) && !empty($password)) {
     mysqli_query($db, "INSERT INTO users (`name`, `surname`, `birth`, `phone`, `email`, `password`) VALUES ('$name', '$surname', '$birth', '$phone', '$email', '$password')");
 }
 
-header('Location: ../content/cont_users.php');
+header('Location: ../Content/cont_users.php');

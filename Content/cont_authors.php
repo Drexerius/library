@@ -1,5 +1,5 @@
 <?php
-    require '../modules/db_connect.php';
+    require '../Modules/db_connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <title>Authors</title>
 </head>
 <body>
-    <form method="post" action="../modules/add_author.php" style="margin-top: 50px;">
+    <form method="post" action="../Modules/add_author.php" style="margin-top: 50px;">
         <fieldset>
             <p><input type="text" name="name" placeholder="Name" required = true></p>
             <p><input type="text" name="surname" placeholder="Surname"></p>
@@ -36,14 +36,14 @@
                 <td><?= $author['surname']; ?></td>
                 <td><?= $author['birth']; ?></td>
                 <td>
-                    <a href="../modules/edit_author.php?id=<?= $author['id']; ?>">Edit</a> /
-                    <a href="../modules/delete_author.php?id=<?= $author['id']; ?>">Delete</a>
+                    <a href="../Modules/edit_author.php?id=<?= $author['id']; ?>">Edit</a> /
+                    <a href="../Modules/delete_author.php?id=<?= $author['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php } } ?>
     </table>
 
-    <form action="../modules/search_author.php" method="post">
+    <form action="../Modules/search_author.php" method="post">
         <input type="text" name="author" placeholder="Author" required = true>
         <input type="submit" value="Search">
     </form>

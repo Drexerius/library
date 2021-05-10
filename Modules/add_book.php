@@ -12,4 +12,4 @@ if (!empty($name)) {
     mysqli_query($db, "INSERT INTO books (`name`, `author`, `genre`, `release_date`) VALUES ('$name', '$author', '$genre', '$release_date')");
 }
 
-header('Location: ../content/cont_books.php');
+header('Location: ../Content/cont_books.php');

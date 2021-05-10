@@ -17,4 +17,4 @@ function down" . $unix . "() {
     ];
 }";
 
-file_put_contents('migrations/' . $migration_name, $content);
+file_put_contents('Migrations/' . $migration_name, $content);

@@ -1,5 +1,5 @@
 <?php
-    require '../modules/db_connect.php';
+    require '../Modules/db_connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <title>Users</title>
 </head>
 <body>
-    <form method="post" action="../modules/add_user.php" style="margin-top: 50px;">
+    <form method="post" action="../Modules/add_user.php" style="margin-top: 50px;">
         <fieldset>
             <p><input type="text" name="login" placeholder="Login" required = true></p>
             <p><input type="text" name="name" placeholder="Name"></p>
@@ -44,8 +44,8 @@
                 <td><?= $user['phone']; ?></td>
                 <td><?= $user['email']; ?></td>
                 <td>
-                    <a href="../modules/edit_user.php?id=<?= $user['id']; ?>">Edit</a> /
-                    <a href="../modules/delete_user.php?id=<?= $user['id']; ?>">Delete</a>
+                    <a href="../Modules/edit_user.php?id=<?= $user['id']; ?>">Edit</a> /
+                    <a href="../Modules/delete_user.php?id=<?= $user['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php } } ?>

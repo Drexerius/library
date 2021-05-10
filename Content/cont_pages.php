@@ -1,5 +1,5 @@
 <?php
-require '../modules/db_connect.php';
+require '../Modules/db_connect.php';
 
 $page = $_GET['page'];
 $per_page = 3;

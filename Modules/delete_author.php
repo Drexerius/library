@@ -5,7 +5,7 @@ $id = htmlspecialchars(addslashes($_GET['id']));
 
 if (!empty($id)) {
     mysqli_query($db, "DELETE FROM authors WHERE id = $id");
-    header('Location: ../content/cont_authors.php');
+    header('Location: ../Content/cont_authors.php');
 } else {
     die('ID not found');
 }

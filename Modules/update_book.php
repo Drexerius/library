@@ -11,5 +11,5 @@ $release_Date = htmlspecialchars(addslashes($_POST['release_date']));
 
 mysqli_query($db, "UPDATE books SET name = '$name', author = '$author', genre = '$genre', release_date = '$release_Date' WHERE id = " . $id);
 
-header('Location: ../content/cont_books.php');
+header('Location: ../Content/cont_books.php');
 ?>

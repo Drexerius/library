@@ -1,5 +1,5 @@
 <?php
-require '../modules/db_connect.php';
+require '../Modules/db_connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@ require '../modules/db_connect.php';
 </head>
 
 <body>
-    <form method="post" action="../modules/add_book.php" style="margin-top: 50px;">
+    <form method="post" action="../Modules/add_book.php" style="margin-top: 50px;">
         <fieldset>
             <p><input type="text" name="name" placeholder="Name" required = true></p>
             <p><input type="text" name="author" placeholder="Author"></p>
@@ -42,8 +42,8 @@ require '../modules/db_connect.php';
                     <td><?= $book['genre_name']; ?></td>
                     <td><?= $book['release_date']; ?></td>
                     <td>
-                        <a href="../modules/edit_book.php?id=<?= $book['id']; ?>">Edit</a> /
-                        <a href="../modules/delete_book.php?id=<?= $book['id']; ?>">Delete</a>
+                        <a href="../Modules/edit_book.php?id=<?= $book['id']; ?>">Edit</a> /
+                        <a href="../Modules/delete_book.php?id=<?= $book['id']; ?>">Delete</a>
                     </td>
                 </tr>
         <?php }

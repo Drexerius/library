@@ -10,5 +10,5 @@ $birth = htmlspecialchars(addslashes($_POST['birth']));
 
 mysqli_query($db, "UPDATE authors SET name = '$name', surname = '$surname', birth = '$birth' WHERE id = " . $id);
 
-header('Location: ../content/cont_authors.php');
+header('Location: ../Content/cont_authors.php');
 ?>

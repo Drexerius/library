@@ -12,5 +12,5 @@ $email = htmlspecialchars(addslashes($_POST['email']));
 
 mysqli_query($db, "UPDATE users SET name = '$name', surname = '$surname', birth = '$birth', phone = '$phone', email = '$email' WHERE id = " . $id);
 
-header('Location: ../content/cont_users.php');
+header('Location: ../Content/cont_users.php');
 ?>

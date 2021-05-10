@@ -11,4 +11,4 @@ if (!empty($name)) {
     mysqli_query($db, "INSERT INTO authors (`name`, `surname`, `birth`) VALUES ('$name', '$surname', '$birth')");
 }
 
-header('Location: ../content/cont_authors.php');
+header('Location: ../Content/cont_authors.php');

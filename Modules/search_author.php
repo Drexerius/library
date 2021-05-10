@@ -32,8 +32,8 @@ $author = htmlspecialchars(addslashes($_POST['author']));
                 <td><?= $book['genre_name']; ?></td>
                 <td><?= $book['release_date']; ?></td>
                 <td>
-                    <a href="../modules/edit_book.php?id=<?= $book['id']; ?>">Edit</a> /
-                    <a href="../modules/delete_book.php?id=<?= $book['id']; ?>">Delete</a>
+                    <a href="/edit_book.php?id=<?= $book['id']; ?>">Edit</a> /
+                    <a href="/delete_book.php?id=<?= $book['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php }
